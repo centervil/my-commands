@@ -16,7 +16,7 @@ prompt = """
 - **引数がある場合**: 指定されたIssue IDに対して「Existing Issue Deep Dive」を実行してください。
 - **引数がない場合**: 「New Issue Definition」を開始し、新しいIssueを立てるためのインタビューを行ってください。
 
-インタビューを通じて、最終的に `requirements.md` を作成し、ユーザーの承認を得ることが目標です。
+インタビューを通じて、最終的に GitHub Issue の本文を最新の要件で更新し、プロジェクトの SSOT（Single Source of Truth）を確立することが目標です。
 """
 
 [[argument]]
