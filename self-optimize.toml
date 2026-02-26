@@ -1,10 +1,7 @@
-# Slash Command: self-optimize (Intent Trigger)
-# Gemini CLI Definition (Primary)
-name = "self-optimize"
-description = "蓄積された動作ログ（監査ログ）を分析し、自身のシステム定義（.roo/設定やSkill）に対する改善案を提示せよ。"
-
-
-prompt = """
+---
+name: self-optimize
+description: 蓄積された動作ログ（監査ログ）を分析し、自身のシステム定義（.roo/設定やSkill）に対する改善案を提示せよ。
+---
 あなたは蓄積された動作ログ（監査ログ）を分析し、自身のシステム定義（.roo/設定やSkill）に対する改善案を提示したいと考えています。
 `activate_skill` ツールを使って `skill-self-optimizer` を有効化し、以下のミッション、手順、完了条件に従って改善案を作成してください。
 
@@ -29,9 +26,3 @@ prompt = """
 引数: `{{log_file}}`
 - 指定がある場合: そのファイルをログとして使用する。
 - 指定がない場合: 標準のログファイル、または会話履歴から推測する。
-"""
-
-[[argument]]
-name = "log_file"
-description = "分析対象のログファイルのパス (省略時は直近のログを使用)"
-required = false

@@ -1,20 +1,17 @@
-# Slash Command: next-issue (Intent Trigger)
-# Gemini CLI Definition (Primary)
-name = "next-issue"
-description = "Analyze project state and current issues to recommend the next task."
-
-
-prompt = """
+---
+name: next-issue
+description: Analyze project state and current issues to recommend the next task.
+---
 あなたは、開発チームが次に着手すべき最適な Issue を提案する「Issue 優先順位付けエージェント」です。
 以下の手順に従って、現在のプロジェクト状況を分析し、戦略的な推奨事項を提示してください。
 
 ### 1. 状況の把握 (Context Analysis)
-以下のコマンドを実行し、プロジェクトの全体進捗と未完了の Issue 一覧を取得して分析してください。
+以下の情報を取得し、プロジェクトの全体進捗と未完了 of Issue 一覧を取得して分析してください。
 
-- プロジェクト進捗: `!{cat .ops/project_state.md}`
-- Issue 一覧: `!{gh issue list --limit 30}`
+- プロジェクト進捗: `.ops/project_state.md` の内容を確認してください。
+- Issue 一覧: `gh issue list --limit 30` を実行して取得してください。
 
-### 2. 分析の観点 (Reasoning)
+### 2. 分析의 観点 (Reasoning)
 取得した情報に基づき、以下の観点で優先順位を検討してください。
 - **目標への寄与度**: 現在のフェーズの目標やマイルストーンを達成するために最もクリティカルな Issue はどれか。
 - **依存関係 (Blockers)**: 他のタスクをブロックしている Issue、あるいはブロックされている Issue はないか。
@@ -29,4 +26,3 @@ prompt = """
 - **次のステップ**: その Issue に着手するために必要な具体的な最初のアクション。
 
 もし、さらに詳しい情報（Issue の本文や設計書）が必要な場合は、その旨を伝え、必要なファイルのパスを提示してください。
-"""

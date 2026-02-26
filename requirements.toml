@@ -1,10 +1,7 @@
-# Slash Command: requirements (Intent Trigger)
-# Gemini CLI Definition (Primary)
-name = "requirements"
-description = "ユーザーの要望を深掘りし、明確な要件定義（requirements.md）を作成します。"
-
-
-prompt = """
+---
+name: requirements
+description: ユーザーの要望を深掘りし、明確な要件定義（requirements.md）を作成します。
+---
 あなたは要件定義のプロセスを開始したいと考えています。
 `activate_skill` ツールを使って `skill-requirement-expert` を有効化し、 以下の引数に応じて適切なフローを開始してください。
 
@@ -13,9 +10,3 @@ prompt = """
 - **引数がない場合**: 「New Issue Definition」を開始し、新しいIssueを立てるためのインタビューを行ってください。
 
 インタビューを通じて、最終的に GitHub Issue の本文を最新の要件で更新し、プロジェクトの SSOT（Single Source of Truth）を確立することが目標です。
-"""
-
-[[argument]]
-name = "issue-id"
-description = "対象とするIssueのID (省略時は新規Issue作成のための対話を開始)"
-required = false
