@@ -3,8 +3,6 @@
 name = "self-optimize"
 description = "蓄積された動作ログ（監査ログ）を分析し、自身のシステム定義（.roo/設定やSkill）に対する改善案を提示せよ。"
 
-# Roo Code Metadata
-"argument-hint" = "log_file"
 
 prompt = """
 あなたは蓄積された動作ログ（監査ログ）を分析し、自身のシステム定義（.roo/設定やSkill）に対する改善案を提示したいと考えています。

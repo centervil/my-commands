@@ -3,8 +3,6 @@
 name = "audit"
 description = "リポジトリ全体の健全性監査、または指定プロジェクトの監査・E2Eテストを実行します。"
 
-# Roo Code Metadata
-"argument-hint" = "project-name"
 
 prompt = """
 あなたはリポジトリまたはプロジェクトの監査を行いたいと考えています。

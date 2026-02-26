@@ -3,9 +3,6 @@
 name = "setup-project"
 description = "Initialize a new project with Roocode-compatible structure and documents."
 
-# Roo Code Metadata
-# @role: Platform Architect
-"argument-hint" = "project-name project-description [target-dir]"
 
 prompt = """
 あなたは、新規プロジェクトに Roocode を導入するための「セットアップエージェント」です。

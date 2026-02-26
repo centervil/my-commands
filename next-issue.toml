@@ -3,8 +3,6 @@
 name = "next-issue"
 description = "Analyze project state and current issues to recommend the next task."
 
-# Roo Code Metadata
-# @role: Project Manager Assistant
 
 prompt = """
 あなたは、開発チームが次に着手すべき最適な Issue を提案する「Issue 優先順位付けエージェント」です。

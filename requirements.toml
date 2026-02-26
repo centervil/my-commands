@@ -3,10 +3,6 @@
 name = "requirements"
 description = "ユーザーの要望を深掘りし、明確な要件定義（requirements.md）を作成します。"
 
-# Roo Code Metadata (For AI interpretation if read via symlink)
-# @role: Requirement Expert
-# @trigger: User needs to define a new feature or fix a bug.
-"argument-hint" = "issue-id"
 
 prompt = """
 あなたは要件定義のプロセスを開始したいと考えています。

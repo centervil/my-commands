@@ -1,1 +1,13 @@
-../../work/my-commands/metrics.toml
+# Slash Command: metrics (Intent Trigger)
+# Gemini CLI Definition (Primary)
+name = "metrics"
+description = "プロジェクトの最新メトリクス（自律性、規約適合度等）を集計し、ステータスを更新・報告します。"
+
+prompt = """
+あなたはプロジェクトの最新の健全性を測定したいと考えています。
+`activate_skill` ツールを使って `skill-metrics-manager` を有効化し、以下の手順を実行してください。
+
+1. メトリクスの集計を実行し、`.ops/audit_logs/metrics.json` を更新する。
+2. 集計結果を `project_state.md` に反映する。
+3. 現在のシステム完全性（System Integrity）と自律性（Autonomy）の状況をユーザーに簡潔に報告する。
+"""

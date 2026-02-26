@@ -3,9 +3,6 @@
 name = "dev"
 description = "開発サイクル(IDD)を進行するための統合コマンドです。"
 
-# Roo Code Metadata
-# @role: Orchestrator
-"argument-hint" = "[issue-id] [subcommand]"
 
 prompt = """
 ユーザーはIssue駆動開発(IDD)のプロセスを進めようとしています。
