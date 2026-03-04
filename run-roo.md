@@ -19,11 +19,12 @@ prompt = """
      /home/coder/project/.infra/scripts/setup_roo.sh
      ```
 2. **環境変数の確認**:
-   - `OPENROUTER_API_KEY` または `ANTHROPIC_API_KEY` が設定されているか確認してください。
+   - `OPENROUTER_API_KEY` および `ROO_MODEL` が設定されているか確認してください。
+   - 設定されていない場合は、`.env` ファイルに記述するよう案内してください。
 3. **コマンドの実行**:
-   - 以下の形式で `roo` CLI を実行してください。モデルはユーザー指定がなければ `minimax/minimax-m2.1:free` を使用します。
+   - 以下の形式で `roo` CLI を実行してください。モデル名は `.env` で定義された `$ROO_MODEL` を使用します。
      ```bash
-     /home/coder/.local/bin/roo --mode "<mode>" --model "minimax/minimax-m2.1:free" --print "<prompt>"
+     export $(grep -v '^#' .env | xargs) && /home/coder/.local/bin/roo --mode "<mode>" --model "$ROO_MODEL" --print "<prompt>"
      ```
 4. **結果の解析と報告**:
    - 実行結果を取得し、タスクの完了状態や出力をユーザーに報告してください。
