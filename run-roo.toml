@@ -16,15 +16,14 @@ prompt = """
    - `/home/coder/.local/bin/roo` が存在するか確認してください。
    - 存在しない場合は、以下のコマンドでインストールを実行してください。
      ```bash
-     curl -fsSL https://raw.githubusercontent.com/RooCodeInc/Roo-Code/main/apps/cli/install.sh | sh
+     /home/coder/project/.infra/scripts/setup_roo.sh
      ```
 2. **環境変数の確認**:
    - `OPENROUTER_API_KEY` または `ANTHROPIC_API_KEY` が設定されているか確認してください。
-   - 設定されていない場合は、ユーザーに `export OPENROUTER_API_KEY=xxx` 等で設定するよう案内してください。
 3. **コマンドの実行**:
-   - 以下の形式で `roo` CLI を実行してください（`--print` フラグを使用して非対話的に実行します）。
+   - 以下の形式で `roo` CLI を実行してください。モデルはユーザー指定がなければ `minimax/minimax-m2.1:free` を使用します。
      ```bash
-     /home/coder/.local/bin/roo --mode "<mode>" --print "<prompt>"
+     /home/coder/.local/bin/roo --mode "<mode>" --model "minimax/minimax-m2.1:free" --print "<prompt>"
      ```
 4. **結果の解析と報告**:
    - 実行結果を取得し、タスクの完了状態や出力をユーザーに報告してください。
