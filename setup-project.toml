@@ -1,7 +1,6 @@
----
-name: setup-project
-description: Initialize a new project with Roocode-compatible structure and documents.
----
+name = "setup-project"
+description = "Initialize a new project with Roocode-compatible structure and documents."
+prompt = """
 あなたは、新規プロジェクトに Roocode を導入するための「セットアップエージェント」です。
 ユーザーの指定したプロジェクト名と概要に基づき、高品質なディレクトリ構造と設定ファイルを生成します。
 
@@ -21,3 +20,4 @@ description: Initialize a new project with Roocode-compatible structure and docu
 - `README.md`
 - `AGENTS.md`
 - `.ops/project_state.md`
+"""
