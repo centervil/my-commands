@@ -22,10 +22,11 @@ prompt = """
    - `OPENROUTER_API_KEY` および `ROO_MODEL` が設定されているか確認してください。
    - 設定されていない場合は、`.env` ファイルに記述するよう案内してください。
 3. **コマンドの実行**:
-   - 以下の形式で `roo` CLI を実行してください。モデル名は `.env` で定義された `$ROO_MODEL` を使用します。
+   - 以下の形式で `run_roo_wrapper.sh` を実行してください。
      ```bash
-     export $(grep -v '^#' .env | xargs) && /home/coder/.local/bin/roo --mode "<mode>" --model "$ROO_MODEL" --print "<prompt>"
+     /home/coder/project/.infra/scripts/run_roo_wrapper.sh --mode "<mode>" --print "<prompt>"
      ```
 4. **結果の解析と報告**:
    - 実行結果を取得し、タスクの完了状態や出力をユーザーに報告してください。
+   - **重要**: RAW ログは自動的に `.ops/audit_logs/raw/` に保存されます。
 """
